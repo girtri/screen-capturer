@@ -1,0 +1,19 @@
+
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	font-size: 13px;
+	line-height: 20px;
+	margin: 0;
+}
+
+.titlebar {
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+}
+
+.titlebar button {
+	-webkit-app-region: no-drag;
+}
