@@ -25,8 +25,8 @@ class Main extends Component
 			<div>
 				<TitleBar />
 				<Tabs>
-					<Tab icon={ScreenshotIcon} label="SCREENSHOT" onClick={this.onTabNav(TAB_SCREENSHOT)} />
-					<Tab icon={AnimationIcon} label="ANIMATION" onClick={this.onTabNav(TAB_ANIMATION)} />
+					<Tab icon={ScreenshotIcon} label="SCREENSHOT" onActive={this.onTabNav(TAB_SCREENSHOT)} />
+					<Tab icon={AnimationIcon} label="ANIMATION" onActive={this.onTabNav(TAB_ANIMATION)} />
 				</Tabs>
 				<div>
 					{states.activeTab === TAB_SCREENSHOT
