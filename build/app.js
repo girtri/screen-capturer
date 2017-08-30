@@ -33438,7 +33438,6 @@ let ScreenshotTab = class ScreenshotTab extends __WEBPACK_IMPORTED_MODULE_0_reac
 		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 			"div",
 			{ className: "tab-layout" },
-			"screenshot",
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"div",
 				{ className: "tab-layout__item" },
@@ -35028,7 +35027,6 @@ let AnimationTab = class AnimationTab extends __WEBPACK_IMPORTED_MODULE_0_react_
 		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 			"div",
 			{ className: "tab-layout" },
-			"animation",
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"div",
 				{ className: "tab-layout__item" },
