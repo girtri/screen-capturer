@@ -21,7 +21,7 @@ module.exports = {
 					loader: "babel-loader",
 					options: {
 						presets: ["es2017", "react", "stage-3"],
-						plugins: ["transform-class-properties", "transform-decoratorslegacy"]
+						plugins: ["transform-class-properties", "transform-decorators-legacy"]
 					}
 				}]
 			}

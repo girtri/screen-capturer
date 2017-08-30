@@ -17,3 +17,13 @@ body {
 .titlebar button {
 	-webkit-app-region: no-drag;
 }
+
+.tab-layout {
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 12px;
+}
+
+.tab-layout__item {
+	flex: 1 1 auto;
+}

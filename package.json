@@ -35,7 +35,7 @@
 		"babel-preset-es2017": "^6.24.1",
 		"babel-preset-react": "^6.24.1",
 		"babel-preset-stage-3": "^6.24.1",
-		"nw": "^0.24.4",
+		"nw": "sdk",
 		"webpack": "^3.5.5"
 	}
 }
