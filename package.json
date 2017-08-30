@@ -24,7 +24,10 @@
 		"material-ui": "^0.19.0",
 		"react": "^15.6.1",
 		"react-dom": "^15.6.1",
-		"react-tap-event-plugin": "^2.0.1"
+		"react-redux": "^5.0.6",
+		"react-tap-event-plugin": "^2.0.1",
+		"redux": "^3.7.2",
+		"redux-act": "^1.4.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",

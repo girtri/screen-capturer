@@ -2,20 +2,30 @@
 import React, { Component } from "react";
 import IconButton from "material-ui/IconButton";
 import TextField from "material-ui/TextField";
-
-const TAB_BUTTON_STYLE = {
-	fontSize: 90
-};
-
-const SCREENSHOT_DEFAULT_FILENAME = "screenshot{N}.png";
+import { TAB_BUTTON_STYLE, SCREENSHOT_DEFAULT_FILENAME } from "../Constants";
 
 export default class ScreenshotTab extends Component 
 {
+	onFilenameChange = (e) => {
+		const {value} = e.target;
+		const {actions} = this.props;
+		
+		if (!value.endsWith(".png") || value.length < 6 ) {
+			actions.setScreenshotInputError( "File name cannot be empty and must end with .png" );
+			return;
+		}
+
+		actions.setScreenshotInputError("");
+		actions.setScreenshotFilename(value);
+	}
+
 	render() {
+		const { states } = this.props;
+
 		return (
 			<div className="tab-layout">
 				<div className="tab-layout__item">
-					<TextField floatingLabelText="File name pattern" defaultValue={SCREENSHOT_DEFAULT_FILENAME} />
+					<TextField floatingLabelText="File name pattern" defaultValue={SCREENSHOT_DEFAULT_FILENAME} onChange={this.onFilenameChange} errorText={states.screenshotInputError} />
 				</div>
 				<div className="tab-layout__item">
 					<IconButton tooltip="Take screenshot" iconClassName="material-icons" iconStyle={TAB_BUTTON_STYLE}>add_a_photo</IconButton>
