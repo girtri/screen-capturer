@@ -1,13 +1,22 @@
 
 import React from "react";
 import {render} from "react-dom";
-import {createStore} from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
+import logger from 'redux-diff-logger';
 import {Provider} from "react-redux";
 import App from "./Containers/App.jsx";
 import {appReducer} from "./Reducers";
+import DevTools from "./Components/DevTools.jsx";
 
-const store = createStore(appReducer);
+const storeEnhancer = compose(
+	applyMiddleware(logger),
+	DevTools.instrument()
+);
+const store = createStore(appReducer, storeEnhancer);
 
 render(<Provider store={store}>
-		<App />
+		<div>
+			<App />
+			<DevTools />
+		</div>
 	   </Provider>, document.querySelector("root") );
