@@ -19,6 +19,12 @@ export default class ScreenshotTab extends Component
 		actions.setScreenshotFilename(value);
 	}
 
+	// Handle when clicked CAPTURE
+	onCapture = () => {
+		const {states} = this.props;
+		this.props.capturer.takeScreenshot(states.screenshotFilename);
+	}
+
 	render() {
 		const { states } = this.props;
 
@@ -28,7 +34,7 @@ export default class ScreenshotTab extends Component
 					<TextField floatingLabelText="File name pattern" defaultValue={SCREENSHOT_DEFAULT_FILENAME} onChange={this.onFilenameChange} errorText={states.screenshotInputError} />
 				</div>
 				<div className="tab-layout__item">
-					<IconButton tooltip="Take screenshot" iconClassName="material-icons" iconStyle={TAB_BUTTON_STYLE}>add_a_photo</IconButton>
+					<IconButton tooltip="Take screenshot" iconClassName="material-icons" iconStyle={TAB_BUTTON_STYLE} onClick={this.onCapture}>add_a_photo</IconButton>
 				</div>
 			</div>
 		)
