@@ -10,6 +10,7 @@ import DevTools from "./Components/DevTools.jsx";
 import Fsys from "./Service/Capturer/Fsys";
 import Dom from "./Service/Capturer/Dom";
 import Capturer from "./Service/Capturer";
+import Tray from "./Service/Tray";
 
 const storeEnhancer = compose(
 	applyMiddleware(logger),
@@ -17,6 +18,7 @@ const storeEnhancer = compose(
 );
 const store = createStore(appReducer, storeEnhancer);
 const capturer = new Capturer(new Fsys(), new Dom());
+const tray = new Tray(capturer, store);
 
 render(<Provider store={store}>
 		<div>
@@ -24,3 +26,5 @@ render(<Provider store={store}>
 			<DevTools />
 		</div>
 	   </Provider>, document.querySelector("root"));
+
+tray.render();
