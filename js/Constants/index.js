@@ -7,3 +7,7 @@ export const ANIMATION_DEFAULT_FILENAME = "animation{N}.webm";
 export const TAB_BUTTON_STYLE = {
 	fontSize: 90
 };
+
+export const TAKE_SCREENSHOT_SHORTCUT = "Shift+Alt+4";
+export const RECORD_SHORTCUT = "Shift+Alt+5";
+export const STOP_SHORTCUT = "Shift+Alt+6";
